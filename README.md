@@ -32,7 +32,7 @@ Ferramentas utilizadas no projeto
 Acesse a url abaixo para visualizar o projeto em execução
 
 ```
-... Link para acessar o projeto em produção
+https://space-tourism-travels.netlify.app/
 ```
 
 <div align="center" >
