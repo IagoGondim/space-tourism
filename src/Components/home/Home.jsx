@@ -1,38 +1,39 @@
 import React from "react";
 import {
-  Background,
   Container,
   ContainerBg,
   Heading1,
   Heading5,
   Paragraph,
 } from "../../styles/GlobalStyle";
-import background from "../../assets/home/background-home-desktop.jpg";
-import { Button, ContentContainer, TextWrapper } from "./Style";
+
+import { Background, Button, ContentContainer, TextWrapper } from "./Style";
 import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <Container>
-      <ContainerBg>
-        <Background src={background} />
-      </ContainerBg>
-      <ContentContainer>
-        <TextWrapper>
-          <Heading5>SO, YOU WANT TO TAVEL TO</Heading5>
-          <Heading1>SPACE</Heading1>
-          <Paragraph>
-            Let’s face it; if you want to go to space, you might as well
-            genuinely go to outer space and not hover kind of on the edge of it.
-            Well sit back, and relax because we’ll give you a truly out of this
-            world experience!
-          </Paragraph>
-        </TextWrapper>
-        <Link to="/destinations">
-          <Button>EXPLORE</Button>
-        </Link>
-      </ContentContainer>
-    </Container>
+    <>
+      <Container>
+        <ContainerBg>
+          <Background />
+        </ContainerBg>
+        <ContentContainer>
+          <TextWrapper>
+            <Heading5>SO, YOU WANT TO TAVEL TO</Heading5>
+            <Heading1>SPACE</Heading1>
+            <Paragraph>
+              Let’s face it; if you want to go to space, you might as well
+              genuinely go to outer space and not hover kind of on the edge of
+              it. Well sit back, and relax because we’ll give you a truly out of
+              this world experience!
+            </Paragraph>
+          </TextWrapper>
+          <Link to="/destinations">
+            <Button>EXPLORE</Button>
+          </Link>
+        </ContentContainer>
+      </Container>
+    </>
   );
 };
 

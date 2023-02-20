@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import background from "../../assets/crew/background-crew-desktop.jpg";
-import homem from "../../assets/crew/image-douglas-hurley.png";
 import {
   Background,
   Container,
@@ -11,7 +10,6 @@ import {
   HeadingWrapper,
   Number,
   InfoWrapper,
-  Heading1,
   Paragraph,
   Heading2,
   Heading4Opa,

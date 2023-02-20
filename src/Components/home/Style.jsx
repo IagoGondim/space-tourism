@@ -1,15 +1,40 @@
 import styled from "styled-components";
 import backgroundDesktop from "../../assets/home/background-home-desktop.jpg";
+import backgroundTablet from "../../assets/home/background-home-tablet.jpg";
+import backgroundMobile from "../../assets/home/background-home-mobile.jpg";
 
 export const ContentContainer = styled.div`
+  display: flex;
+  width: 100%;
   z-index: 3;
   width: 100%;
-  position: absolute;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
   color: #ffffff;
   margin-top: 15rem;
   max-width: 1440px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10rem;
+  }
+  @media (max-width: 480px) {
+  }
+`;
+
+export const Background = styled.div`
+  height: 100vh;
+  background: url(${backgroundMobile}) no-repeat center;
+  background-size: cover;
+  overflow-y: scroll;
+
+  @media (min-width: 481px) {
+    background-image: url(${backgroundTablet});
+  }
+  @media (min-width: 769px) {
+    background-image: url(${backgroundDesktop});
+  }
 `;
 
 export const TextWrapper = styled.div`
@@ -19,12 +44,17 @@ export const TextWrapper = styled.div`
   row-gap: 2rem;
   width: 100%;
   max-width: 28rem;
+
+  @media (max-width: 768px) {
+    align-items: center;
+    margin-left: 0rem;
+    padding-bottom: 4rem;
+  }
+  @media (max-width: 480px) {
+  }
 `;
 
 export const Button = styled.button`
-  position: absolute;
-  top: 0;
-  right: 0;
   margin: 5rem 8rem;
   font-size: 2em;
   letter-spacing: 2px;
@@ -37,5 +67,15 @@ export const Button = styled.button`
   &:hover {
     box-shadow: 0 0 0 80px rgba(255, 255, 255, 0.15);
     cursor: pointer;
+  }
+  @media (max-width: 768px) {
+    margin: 0;
+  }
+  @media (max-width: 480px) {
+    font-size: 1em;
+    letter-spacing: 2px;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
   }
 `;

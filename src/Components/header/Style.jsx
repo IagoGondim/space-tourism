@@ -24,23 +24,80 @@ export const NavHeader = styled.header`
     left: 10rem;
     z-index: 2;
   }
+  @media (max-width: 481px) {
+  }
+  @media (max-width: 769px) {
+    max-width: 768px;
+    width: 100%;
+    margin-top: 0rem;
+    padding-left: 0rem;
+    justify-content: space-between;
+
+    &:before {
+      display: none;
+    }
+  }
 `;
 
 export const Logo = styled(LogoBrand)`
-  cursor: pointer;
+  margin-left: 1rem;
 `;
 
 export const LogoWrapper = styled.div``;
-export const ContainerNav = styled.nav`
-  list-style: none;
+
+export const HamburgerWrapper = styled.div`
+  background-color: transparent;
+  border: none;
   display: flex;
-  column-gap: 3rem;
-  padding-left: 7.5rem;
-  padding-right: 10rem;
-  height: 100%;
+  justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(1rem);
+  margin-right: 1.5rem;
+  z-index: 5;
+  cursor: pointer;
+  transition: transform 0.5s;
+  transform: rotate(${({ toggle }) => (toggle ? "-90deg" : "0deg")});
+  @media (min-width: 481px) {
+    display: none;
+  }
+`;
+
+export const ContainerNav = styled.nav`
+  z-index: 3;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: transparent;
+  top: 0;
+  right: 0;
+  width: 60vw;
+  height: 60vh;
+  padding-top: 6rem;
+  transition: transform 300ms;
+  transform: scaleY(${({ toggle }) => (toggle ? "1" : "0")});
+  backdrop-filter: blur(50px);
+  & a:first-child {
+    border-top: 2px solid black;
+  }
+  @media (min-width: 481px) {
+    position: static;
+    flex-direction: row;
+    width: 65%;
+    height: 6rem;
+    padding-top: 0px;
+
+    border-top: none;
+    transition: none;
+    background-color: rgba(255, 255, 255, 0.04);
+    & a:first-child {
+      border-top: none;
+    }
+  }
+  @media (min-width: 769px) {
+    backdrop-filter: blur(5px);
+    max-width: 1000px;
+    width: 65%;
+  }
 `;
 
 export const Links = styled(NavLink)`
@@ -56,9 +113,6 @@ export const Links = styled(NavLink)`
   text-decoration: none;
   height: 100%;
   align-items: center;
-  p {
-    font-weight: bold;
-  }
 
   &.active {
     &:after {
@@ -71,5 +125,15 @@ export const Links = styled(NavLink)`
       left: 0;
       transition: 200ms;
     }
+  }
+`;
+
+export const BoldSpan = styled.p`
+  font-weight: bold;
+
+  @media (max-width: 481px) {
+  }
+  @media (max-width: 769px) {
+    display: none;
   }
 `;

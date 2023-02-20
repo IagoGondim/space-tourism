@@ -7,19 +7,26 @@ export const Test = styled.div`
 
 export const PersonImg = styled.img`
   background-size: cover;
-  padding: 5rem 0 0 5rem;
-  margin-top: 2rem;
-  position: absolute;
-  top: 0;
-  right: 0;
+  height: 70vh;
+
+  @media (max-width: 768px) {
+    height: 45vh;
+  }
+  @media (max-width: 480px) {
+    height: 45vh;
+  }
 `;
 
 export const ContainerButton = styled.div`
   display: flex;
   column-gap: 1.5rem;
-  height: 350px;
-  position: fixed;
+  position: relative;
   align-items: flex-end;
+
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 480px) {
+  }
 `;
 
 export const Button = styled.button`

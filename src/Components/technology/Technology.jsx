@@ -4,19 +4,21 @@ import {
   Background,
   Container,
   ContainerBg,
-  ContainerInfo,
   ContentContainer,
   Heading2,
   Heading4,
   HeadingWrapper,
-  InfoWrapper,
   Number,
   Paragraph,
-  SubHeading2,
   SubHeading3,
 } from "../../styles/GlobalStyle";
-import { Button, ContainerButton, Images } from "./Style";
-import rocket from "../../assets/technology/image-launch-vehicle-portrait.jpg";
+import {
+  Button,
+  ContainerButton,
+  Images,
+  ContainerInfo,
+  InfoWrapper,
+} from "./Style";
 import { Pagedata } from "../../data/PageData";
 
 const Technology = () => {

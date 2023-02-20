@@ -17,6 +17,12 @@ export const Number = styled.p`
   text-transform: uppercase;
   font-size: 1.875rem;
   font-family: "Barlow Condensed", sans-serif;
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+  @media (max-width: 480px) {
+    font-size: 1.25rem;
+  }
 `;
 
 export const Heading1 = styled.h1`
@@ -24,13 +30,27 @@ export const Heading1 = styled.h1`
   font-weight: normal;
   font-size: 8rem;
   font-family: "Bellefair", serif;
+  @media (max-width: 768px) {
+    font-size: 5rem;
+    letter-spacing: 3.75;
+  }
+  @media (max-width: 480px) {
+    font-size: 5rem;
+    letter-spacing: 3.75;
+  }
 `;
 
 export const Heading2 = styled.h2`
-  font-size: 56px;
+  font-size: 3.5rem;
   font-family: "Bellefair", serif;
   font-weight: 400;
   text-transform: uppercase;
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+  }
+  @media (max-width: 480px) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const Heading3 = styled.h3`
@@ -44,6 +64,12 @@ export const Heading4 = styled.h4`
   text-transform: uppercase;
   font-size: 1.875rem;
   font-family: "Bellefair", serif;
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+  @media (max-width: 480px) {
+    font-size: 1.25rem;
+  }
 `;
 
 export const Heading4Opa = styled.h4`
@@ -53,6 +79,12 @@ export const Heading4Opa = styled.h4`
   font-size: 1.875rem;
   font-family: "Bellefair", serif;
   opacity: 0.5;
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
 `;
 
 export const Heading5 = styled.h5`
@@ -60,6 +92,10 @@ export const Heading5 = styled.h5`
   letter-spacing: 4.75;
   font-family: "Barlow Condensed", sans-serif;
   color: #d0d6f9;
+  @media (max-width: 480px) {
+    font-size: 1rem;
+    letter-spacing: 3.75;
+  }
 `;
 
 export const SubHeading1 = styled.p`
@@ -67,6 +103,14 @@ export const SubHeading1 = styled.p`
   color: #ffffff;
   text-transform: uppercase;
   font-family: "Bellefair", serif;
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    letter-spacing: 3.75;
+  }
+  @media (max-width: 450px) {
+    font-size: 1rem;
+    letter-spacing: 3.75;
+  }
 `;
 
 export const SubHeading2 = styled.p`
@@ -75,6 +119,10 @@ export const SubHeading2 = styled.p`
   color: #d0d6f9;
   text-transform: uppercase;
   font-family: "Barlow Condensed", sans-serif;
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 450px) {
+  }
 `;
 
 export const SubHeading3 = styled.p`
@@ -89,6 +137,14 @@ export const Paragraph = styled.p`
   font-size: 1.25rem;
   font-family: "Barlow Condensed", sans-serif;
   color: #d0d6f9;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    letter-spacing: 3.75;
+  }
+  @media (max-width: 480px) {
+    font-size: 0.75rem;
+    letter-spacing: 3.75;
+  }
 `;
 
 export const NavText = styled.p`
@@ -102,7 +158,6 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 30px;
   min-height: 100vh;
   position: relative;
 `;
@@ -120,48 +175,68 @@ export const ContainerBg = styled.div`
 
 export const Background = styled.img`
   width: 100%;
-  height: 100%;
+  height: 100vh;
   -o-object-fit: cover;
   object-fit: cover;
   background: #232a34;
 `;
 
 export const ContentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  row-gap: 6rem;
   width: 100%;
   position: relative;
   color: #ffffff;
 `;
 
 export const HeadingWrapper = styled.div`
-  width: 100%;
   padding-left: 10rem;
   column-gap: 1.5rem;
   position: relative;
   display: flex;
   align-items: center;
   color: #ffffff;
-  height: 100px;
+  @media (max-width: 768px) {
+    padding-left: 2rem;
+  }
+  @media (max-width: 480px) {
+  }
 `;
 
 export const ContainerInfo = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   padding-left: 5rem;
-  max-width: 1440px;
+  max-width: 1200px;
+  margin: 2rem auto auto auto;
   margin: auto;
-  height: 60vh;
+  height: 500px;
   column-gap: 3rem;
+  row-gap: 1rem;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0rem;
+    align-items: center;
+  }
+  @media (max-width: 480px) {
+  }
 `;
 
 export const InfoWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 600px;
-  row-gap: 2rem;
-  padding: 8rem 0 0 4rem;
-  height: 55vh;
+  width: 100%;
+  row-gap: 1rem;
+  @media (max-width: 768px) {
+    align-items: center;
+  }
+  @media (max-width: 480px) {
+  }
 `;
 
 export const colors = {
